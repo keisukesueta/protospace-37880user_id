@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
      if @comment.save
       redirect_to prototype_path(@comment.prototype)
      else
-      @prototypes = @comment.prototypes
+      @prototype = @comment.prototype
       @comments = @prototype.comments
       #@messages = @room.messages.includes(:user)
       render "prototypes/show"
